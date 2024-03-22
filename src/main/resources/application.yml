@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:h2:tcp://localhost/~/jpashop;
+    username: sa
+    password: jpashop
+    driver-class-name: org.h2.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+    properties:
+      hibernate:
+        show_sql: true #콜솔에 sql 출력
+        format_sql: true #모든 sql
+        default_batch_fetch_size: 100
+    open-in-view: true
+logging:
+  level:
+    org.hibernate.sql: debug #로그에 sql 출력
+   # org.hibernate.type: trace #로그에 값을 적어준다(보기불편) git 라이브러이를 추가해서 불필요
